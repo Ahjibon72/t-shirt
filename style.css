@@ -1,0 +1,90 @@
+.navbar-light .navbar-nav .nav-link {
+    color: #0a0101 !important;
+    font-weight: 400;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: white !important; 
+    background-color:red ;
+}
+
+.container .card:hover{
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+}
+
+nav .pagination:hover{
+    color: rgb(219, 12, 12);
+    background-color: rgb(197, 42, 42);
+} 
+
+/* offers */
+.offers{
+    padding-top: 8.75rem;
+}
+.offers .offer-box .offer-image::before{
+    position:absolute;
+    content:'';
+    top: 0;
+    left: -100;
+    z-index: 2;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+    transform: skewX(-25deg);
+}
+.offers .offer-box .offer-image img{
+    transform: scale(1.02);
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.offers .offer-box:hover .offer-image::before{
+    animation: effect_shine 1s;
+}
+@keyframes effect_shine{
+    100%{
+        left:150%;
+    }
+}
+
+.offers .offer-overlay::before{
+    position:absolute;
+    content:'';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.offers .offer-box .offer-info{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transition: 250ms ease-out;
+    justify-content: center;
+    align-items: center;
+}
+.offers .offer-box .offer-info .heaning-bigger{
+    font-size: 4.37rem; 
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: var(--text-white);
+}
+/* featured catagories */
+.featured-categories img:hover {
+transform: scale(1.1);
+}
+
